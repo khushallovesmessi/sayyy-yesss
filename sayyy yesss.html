@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Note For You</title>
+    <style>
+        /* General Styling */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a2e; /* Dark blue background like the video */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .phone-container {
+            width: 375px;
+            height: 812px;
+            background-color: #fff1f2; /* Light pinkish background */
+            border-radius: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        /* Custom scrollbar for a cleaner look */
+        .phone-container::-webkit-scrollbar {
+            width: 0;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: #e94057;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        /* Main Content Cards */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-top: 0;
+        }
+        
+        .letter-icon, .special-moments-icon, .playlist-icon, .game-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Letter Section */
+        .letter-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+            text-align: left;
+        }
+
+        .letter-content .signature {
+            text-align: right;
+            margin-top: 20px;
+            font-style: italic;
+            color: #e94057;
+        }
+
+        /* Special Moments Slider */
+        .slider {
+            display: flex;
+            overflow-x: auto; /* This makes it scrollable horizontally */
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            padding-bottom: 15px;
+        }
+        
+        .slider::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .slider::-webkit-scrollbar-thumb {
+            background: #e94057;
+            border-radius: 10px;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+
+        .slide p {
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        .swipe-note {
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-top: 15px;
+        }
+
+        /* Little Notes Section */
+        .notes-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .note {
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .note:hover {
+            transform: scale(1.05);
+        }
+
+        .note.yellow { background-color: #fffbe6; color: #f59e0b; }
+        .note.purple { background-color: #f3e8ff; color: #8b5cf6; }
+        .note.blue { background-color: #e0f2fe; color: #0ea5e9; }
+
+        .click-note {
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-top: 15px;
+        }
+
+        /* Playlist Section */
+        .song {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            background: #f8f9fa;
+        }
+
+        .song img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .song-info h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .song-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        <header>
+            <h1>Hello to person whom i met unexpectedly</h1>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="letter-icon">💌</div>
+                <h2>I just wanted to tell you that I like you</h2>
+                <div class="letter-content">
+                    <p>From the day I've met you it felt something different... You might think "ohh kya fek raha hai" But honestly I felt
+The excitement I get when I see you msg you can't even imagine like soo good😭
+Ik tu neet de rahi hai so I won't even expect you to say yess but please bol de yaar (obviously after neet) I don't want you to be distracted and also I'll be there for you in every emotional time to support... Sachh promise 😭
+.</p>
+                    <p>I will love you how much I love messi and Barcelona(thoda sa kaam but that much jk more than that) 
+And now I'm saying all this because time doesn't wait.. So I had to with all my confidence (jo kuch thoda hi hai 😭) .</p>
+                    <div class="signature">
+                        <p>Haa bol de yaar pakka golden retriever lenge😭
+</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="delusional movements"></div>
+                <h2>delusional movements</h2>
+                <div class="slider">
+                    <div class="slide">
+                        <img src="c:\Users\hp\OneDrive\Documents\person\WhatsApp Image 2025-10-04 at 15.54.02_d827d7e5.jpg" 
+                        <p>I mean just look at her</p>
+                    </div>
+                    <div class="slide">
+                        <img src="WhatsApp Image 2025-10-04 at 18.25.35_68c86d3d.jpg" 
+                        <p>Me and who karte karte hopefully its you...if its you then one day</p>
+                    </div>
+                    <div class="slide">
+                        <img src="WhatsApp Image 2025-10-04 at 18.23.55_c51fdafc.jpg" 
+                        <p>Hehehe</p>
+                    </div>
+                </div>
+                 <p class="swipe-note">Swipe to see more ✨</p>
+            </div>
+            
+            <div class="card">
+                <h2>Let's do these things if you say yes</h2>
+                <div class="notes-container">
+                    <div class="note yellow">Travel</div>
+                    <div class="note purple">Explore more KHANE KE SPOTS</div>
+                    <div class="note blue">Hiking and Trekking</div>
+                </div>
+                <p class="click-note">Click on any note to see the love behind it! ✨</p>
+            </div>
+
+            <div class="card">
+                <div class="playlist-icon">🎵</div>
+                <h2>Playlist For You</h2>
+                <p style="font-size: 0.9rem; color: #888; margin-top: -10px;">Songs dedicated to u</p>
+                <div class="song">
+                    <img src="WhatsApp Image 2025-10-04 at 21.20.01_457b74c3.jpg" alt="I like me better album art">
+                    <div class="song-info">
+                        <h3>I like me better</h3>
+                    
+                    </div>
+                </div>
+                <div class="song">
+                    <img src="WhatsApp Image 2025-10-04 at 21.03.55_b313c5a4.jpg" alt="i think they call this love album art">
+                    <div class="song-info">
+                        <h3>i think they call this love</h3>
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+        </main>
+    </div>
+
+</body>
+</html>
